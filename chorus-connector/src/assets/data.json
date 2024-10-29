@@ -199,6 +199,16 @@
                 "city": "Charlotte",
                 "state": "NC"
             }
+        },
+        {
+            "id": "671bc00741c7d3fbe67156d9",
+            "name": "Out Loud Chorus",
+            "description": "The Greatest Chorus on the face of this or any other planet.",
+            "contactEmail": "contact@olconline.org",
+            "location": {
+                "city": "Ann Arbor",
+                "state": "MI"
+            }
         }
     ]
 }
