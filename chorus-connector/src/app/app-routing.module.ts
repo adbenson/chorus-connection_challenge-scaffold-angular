@@ -5,6 +5,8 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { ChorusDetailPageComponent } from './pages/chorus-detail-page/chorus-detail-page.component';
 import { ChorusDetailComponent } from './chorus/chorus-detail/chorus-detail.component';
 import { ChorusDetailEditComponent } from './chorus/chorus-detail-edit/chorus-detail-edit.component';
+import { authGuardFactory } from './auth/auth.guard';
+import { ChorusDeleteConfirmComponent } from './chorus/chorus-delete-confirm/chorus-delete-confirm.component';
 
 const routes: Routes = [
   {
@@ -32,7 +34,13 @@ const routes: Routes = [
       {
         path: 'edit',
         component: ChorusDetailEditComponent,
-      }
+        canActivate: [authGuardFactory('edit')],
+      },
+      {
+        path: 'delete',
+        component: ChorusDeleteConfirmComponent,
+        canActivate: [authGuardFactory('delete')],
+      },
     ]
   },
 ];

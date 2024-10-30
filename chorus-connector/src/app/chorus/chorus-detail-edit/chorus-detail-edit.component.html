@@ -1,1 +1,11 @@
-<p>chorus-detail-edit works!</p>
+<form (ngSubmit)="onSave()">
+    <input
+        type="text"
+        id="name"
+        placeholder="name"
+        required
+        [(ngModel)]="chorus.name" name="name"
+    />
+    <button type="submit">Save</button>
+    <a routerLink="/chorus/new/edit">Add</a>
+</form>

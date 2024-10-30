@@ -22,10 +22,10 @@ export interface Chorus {
 type ChorusLookup = Record<string, Chorus | undefined>;
 
 const listToLookup = (list: ChorusList): ChorusLookup => {
-    return list.reduce<ChorusLookup>((lookup, chorus) => {
-      lookup[chorus.id] = chorus;
-      return lookup;
-    }, {});
+    return list.reduce<ChorusLookup>((lookup, chorus) => ({
+      ...lookup,
+      [chorus.id]: chorus,
+    }), {});
 }
 
 function lookupToList<T>(lookup: Record<string, T | undefined>): Array<T> {

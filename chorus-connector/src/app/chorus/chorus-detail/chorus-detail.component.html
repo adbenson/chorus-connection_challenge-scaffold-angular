@@ -1,13 +1,20 @@
-<div>
-    <h2>{{chorus?.name}}</h2>
+<div *ngIf="!!chorus">
+    <h2>{{chorus.name}}</h2>
 
     <div>
-        {{chorus?.description}}
+        {{chorus.description}}
     </div>
 
     <div>
-        {{chorus?.location?.city}}, {{chorus?.location?.state}}
+        {{chorus.location.city}}, {{chorus.location.state}}
     </div>
 
-    <a [href]="'mailto:' + chorus?.contactEmail">{{chorus?.contactEmail}}</a>
+    <div>
+        <a [href]="'mailto:' + chorus.contactEmail">{{chorus.contactEmail}}</a>
+    </div>
+
+    <div>
+        <a *ngIf="canEdit" routerLink="edit">Edit</a>
+        <a *ngIf="canDelete" routerLink="delete">Delete</a>
+    </div>
 </div>
