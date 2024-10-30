@@ -1,0 +1,13 @@
+<div>
+    <h2>{{chorus?.name}}</h2>
+
+    <div>
+        {{chorus?.description}}
+    </div>
+
+    <div>
+        {{chorus?.location?.city}}, {{chorus?.location?.state}}
+    </div>
+
+    <a [href]="'mailto:' + chorus?.contactEmail">{{chorus?.contactEmail}}</a>
+</div>

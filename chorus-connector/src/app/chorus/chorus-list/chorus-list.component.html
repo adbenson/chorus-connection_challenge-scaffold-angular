@@ -2,6 +2,6 @@
 
 <ul>
     <li *ngFor="let chorus of chorusList$ | async">
-        Name: {{chorus.name}}
+        <app-chorus-summary [chorus]="chorus"/>
     </li>
 </ul>

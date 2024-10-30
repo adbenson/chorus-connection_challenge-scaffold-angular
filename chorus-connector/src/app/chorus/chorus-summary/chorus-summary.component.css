@@ -1,0 +1,9 @@
+.summary {
+    margin: 15px 0;
+}
+
+.location {
+    font-weight: 100;
+    margin-left: 1em;
+    text-decoration: none;
+}

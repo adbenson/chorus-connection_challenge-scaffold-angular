@@ -5,18 +5,17 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { ChorusListComponent } from './chorus/chorus-list/chorus-list.component';
-import { CommonModule } from '@angular/common';
+import { ChorusDetailEditComponent } from './chorus/chorus-detail-edit/chorus-detail-edit.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ChorusDetailEditComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HeaderComponent,
-    ChorusListComponent,
   ],
   providers: [
     importProvidersFrom(HttpClientModule),
